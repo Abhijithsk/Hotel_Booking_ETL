@@ -1,0 +1,10 @@
+# The team lead is the default reviewer for everything.
+*                                         @Abhijithsk
+
+# Optional: once each member has a GitHub username, replace the placeholders, remove the leading
+# "#" and GitHub will automatically ask the right person to review changes to their files.
+# /etl/member1_structural_cleaning.py     @member1-username
+# /etl/member2_missing_values.py          @member2-username
+# /etl/member3_invalid_and_outliers.py    @member3-username
+# /etl/member4_features.py                @member4-username
+# /etl/member4_reports.py                 @member4-username

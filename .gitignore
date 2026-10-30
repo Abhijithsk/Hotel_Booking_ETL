@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.vscode/
+.idea/
+# large generated files - recreate them with: python pipeline.py
+raw_data/*.csv
+output/*.csv
+output/*.log
+output/charts/*.png
