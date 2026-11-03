@@ -1,0 +1,24 @@
+step_no,member,transformation,why_it_was_needed,rows_before,rows_after,details
+1,Member 1,"Rename columns to clear, consistent names",Original names such as 'adr' or 'stays_in_week_nights' are cryptic or long; clear names make later analysis code readable.,119390,119390,13 columns renamed
+2,Member 1,Remove exact duplicate records,Duplicate bookings inflate counts and revenue and leak identical rows between train and test sets in ML.,119390,87396,"31,994 duplicate rows removed"
+3,Member 1,"Standardise text (trim spaces, lower case, ISO codes upper)",Mixed case or stray spaces create fake categories ('City Hotel' vs 'city hotel').,87396,87396,12 text columns standardised
+4,Member 1,"Convert dates (build arrival_date, parse status date)","Year, month name and day were in 3 separate columns; a real datetime enables sorting, monthly grouping and time-series work.",87396,87396,arrival_date created; reservation_status_date parsed
+5,Member 1,Change data types (compact integers),Default int64 wastes memory; correct types also document that flags are binary and counts are whole numbers.,87396,87396,17 columns down-cast
+6,Member 2,Missing-value audit (NaN + hidden 'undefined' placeholders),You cannot fix what you have not measured; some missing data is hidden behind text like 'Undefined'.,87396,87396,7 columns have missing data
+7,Member 2,Replace 'undefined' placeholders,Dataset documentation says meal 'Undefined' equals 'SC' (no meal package); the others become an explicit 'unknown' category.,87396,87396,"meal=492, market_segment=2, distribution_channel=5 values fixed"
+8,Member 2,"Drop 'company' column, keep has_company flag",Over 90% empty - imputing would invent data. The useful signal (booked through a company or not) is kept as a 0/1 flag.,87396,87396,"column dropped, flag has_company added"
+9,Member 2,Fill missing 'agent' with 0 and add has_agent flag,A missing agent id means the guest booked directly; 0 = no agent.,87396,87396,missing agent -> 0
+10,Member 2,Fill missing 'children' with 0 (mode),"Only a few rows are missing and the vast majority of bookings have no children, so 0 is the safest imputation.",87396,87396,missing children -> 0
+11,Member 2,Fill missing 'country' with 'UNK',Guessing a country (e.g. the most common) would bias country-wise analysis; an explicit unknown label is honest.,87396,87396,missing country -> UNK
+12,Member 3,Remove bookings with zero guests,A booking for nobody is a data-entry error and breaks per-guest metrics.,87396,87230,166 rows removed
+13,Member 3,Remove stays of zero nights,A stay with no nights has no revenue and no duration - invalid for length-of-stay and revenue analysis.,87230,86639,591 rows removed
+14,Member 3,Remove negative average daily rate,A room price cannot be negative. (A rate of exactly 0 is kept - these are genuine complimentary stays.),86639,86638,1 rows removed
+15,Member 3,Detect outliers with the IQR rule (1.5 x IQR fences),"Extreme values (e.g. a 5,400 room rate, 55 adults) distort means and hurt ML models; we first measure how many there are.",86638,86638,"70,036 flagged values in 13 columns"
+16,Member 3,Cap extreme outliers (winsorise) instead of deleting rows,Capping keeps the booking but removes the distortion. Skewed count columns use percentile caps because their IQR is 0.,86638,86638,"1,088 values capped in 9 columns"
+17,Member 4,"Create calculated columns (nights, guests, revenue)",Raw data only has parts; totals and revenue are what analysts actually report on.,86638,86638,"total_nights, total_guests, estimated_revenue, realized_revenue"
+18,Member 4,"Create categories (lead time, stay length)",Binning continuous values makes patterns easy to compare and gives models stable categorical features.,86638,86638,"lead_time_category, stay_length_category"
+19,Member 4,Create season and year-month columns,Hotel demand is highly seasonal; these allow monthly and seasonal reports.,86638,86638,"season, arrival_year_month"
+20,Member 4,Create guest_group (solo / couple / family / group),A single behavioural segment is easier to analyse than three separate guest-count columns.,86638,86638,guest_group
+21,Member 4,Create room_changed flag,Whether the guest got a different room than booked is a known driver of cancellations and complaints.,86638,86638,room_changed
+22,Member 4,Sort chronologically and add booking_id,Time order is needed for time-series and time-based train/test splits; booking_id gives every row a unique key.,86638,86638,sorted by arrival_date
+23,Member 4,"Final validation checks (nulls, duplicates, ranges, size)",Proves the output really is analysis-ready before it is saved.,86638,86638,"all checks passed; final shape 86,638 x 46"
