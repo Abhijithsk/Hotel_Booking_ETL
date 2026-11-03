@@ -1,0 +1,11 @@
+booking_id,hotel,arrival_date,country,market_segment,total_nights,total_guests,avg_daily_rate,realized_revenue
+84390,resort hotel,2017-08-15,PRT,direct,14,4,318.0,4452.0
+46912,city hotel,2016-10-19,JPN,corporate,23,1,170.0,3910.0
+1740,resort hotel,2015-08-01,PRT,direct,13,3,297.5,3867.5
+57330,city hotel,2017-01-25,AGO,online ta,17,4,223.0,3791.0
+82691,resort hotel,2017-08-03,FRA,online ta,14,2,258.29,3616.06
+1185,resort hotel,2015-07-23,BEL,online ta,18,3,196.0,3528.0
+83101,resort hotel,2017-08-06,PRT,direct,14,3,251.43,3520.02
+75768,resort hotel,2017-06-16,PRT,direct,11,3,318.82,3507.02
+32714,resort hotel,2016-07-02,PRT,direct,11,3,317.0,3487.0
+3423,resort hotel,2015-08-22,PRT,direct,14,4,244.0,3416.0

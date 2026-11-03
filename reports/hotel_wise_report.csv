@@ -1,0 +1,3 @@
+hotel,total_bookings,cancelled_bookings,avg_daily_rate,avg_lead_time,avg_nights,realized_revenue,cancellation_rate_pct
+city hotel,53043,16022,111.65,77.95,3.15,12148373.83,30.21
+resort hotel,33595,7964,100.02,83.8,4.43,10790334.35,23.71

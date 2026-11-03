@@ -1,0 +1,9 @@
+hotel,season,total_bookings,cancelled_bookings,avg_daily_rate,avg_lead_time,avg_nights,realized_revenue,cancellation_rate_pct
+city hotel,autumn,11271,2937,107.95,69.33,2.98,2576654.5,26.06
+city hotel,spring,15263,4854,114.1,73.28,3.09,3431359.48,31.8
+city hotel,summer,17261,5524,123.5,103.92,3.26,4424180.9,32.0
+city hotel,winter,9248,2707,89.97,47.68,3.27,1716178.95,29.27
+resort hotel,autumn,7146,1396,72.91,91.3,4.33,1759452.74,19.54
+resort hotel,spring,8342,1816,73.62,77.39,4.13,1848024.18,21.77
+resort hotel,summer,11642,3644,159.38,110.44,5.37,6257279.64,31.3
+resort hotel,winter,6465,1108,57.14,35.79,3.21,925577.79,17.14
