@@ -124,10 +124,10 @@ If the download fails but `raw_data/hotel_bookings_raw.csv` exists, the pipeline
 ## Team and responsibilities
 | Member | GitHub | Module(s) | Task card |
 |---|---|---|---|
-| Member 1 | _add username_ | `etl/member1_structural_cleaning.py` | [docs/tasks/member1.md](docs/tasks/member1.md) |
-| Member 2 | _add username_ | `etl/member2_missing_values.py` | [docs/tasks/member2.md](docs/tasks/member2.md) |
-| Member 3 | _add username_ | `etl/member3_invalid_and_outliers.py` | [docs/tasks/member3.md](docs/tasks/member3.md) |
-| Member 4 | _add username_ | `etl/member4_features.py`, `etl/member4_reports.py` | [docs/tasks/member4.md](docs/tasks/member4.md) |
+| Member 1 | [@Abhijithsk](https://github.com/Abhijithsk) | `etl/member1_structural_cleaning.py` | [docs/tasks/member1.md](docs/tasks/member1.md) |
+| Member 2 | [@farhanthaha223-hub](https://github.com/farhanthaha223-hub) | `etl/member2_missing_values.py` | [docs/tasks/member2.md](docs/tasks/member2.md) |
+| Member 3 | [@KeerthiM-LAL](https://github.com/KeerthiM-LAL) | `etl/member3_invalid_and_outliers.py` | [docs/tasks/member3.md](docs/tasks/member3.md) |
+| Member 4 | [@anazzmuhmad](https://github.com/anazzmuhmad) | `etl/member4_features.py`, `etl/member4_reports.py` | [docs/tasks/member4.md](docs/tasks/member4.md) |
 | Team lead | [@Abhijithsk](https://github.com/Abhijithsk) | `pipeline.py`, `etl/common.py`, docs, CI | - |
 
 Each member works on their own branch and in their own files, so merges do not conflict. See
