@@ -1,0 +1,4 @@
+deposit_type,total_bookings,cancelled_bookings,avg_daily_rate,avg_lead_time,avg_nights,realized_revenue,cancellation_rate_pct
+no deposit,85493,22977,107.41,78.59,3.66,22909437.65,26.88
+non refund,1038,983,87.48,207.12,2.77,10973.87,94.7
+refundable,107,26,79.93,145.39,3.76,18296.66,24.3

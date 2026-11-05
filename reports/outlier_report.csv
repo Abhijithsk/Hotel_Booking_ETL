@@ -1,0 +1,14 @@
+column,q1,q3,iqr,lower_fence,upper_fence,outliers_iqr_1_5,outlier_pct,min_before,max_before,treatment,cap_value,values_capped,max_after
+lead_time,12.0,126.0,114.0,-159.0,297.0,2353,2.72,0.0,709.0,capped at Q3+3xIQR,468,108,468.0
+avg_daily_rate,72.9,134.44,61.54,-19.41,226.74,2511,2.9,0.0,5400.0,capped at Q3+3xIQR,319.05,136,319.05
+weekend_nights,0.0,2.0,2.0,-3.0,5.0,213,0.25,0.0,19.0,capped at P99.9,7,86,7.0
+week_nights,1.0,4.0,3.0,-3.5,8.5,1514,1.75,0.0,50.0,capped at P99.9,19,81,19.0
+adults,2.0,2.0,0.0,2.0,2.0,22531,26.01,0.0,55.0,capped at P99.9,3,76,3.0
+children,0.0,0.0,0.0,0.0,0.0,8331,9.62,0.0,10.0,capped at P99.9,2,76,2.0
+babies,0.0,0.0,0.0,0.0,0.0,909,1.05,0.0,10.0,capped at P99.9,1,17,1.0
+previous_cancellations,0.0,0.0,0.0,0.0,0.0,1677,1.94,0.0,26.0,kept (genuine values),,0,26.0
+previous_bookings_kept,0.0,0.0,0.0,0.0,0.0,3507,4.05,0.0,72.0,kept (genuine values),,0,72.0
+booking_changes,0.0,0.0,0.0,0.0,0.0,15683,18.1,0.0,18.0,capped at P99.9,6,74,6.0
+waiting_days,0.0,0.0,0.0,0.0,0.0,854,0.99,0.0,391.0,capped at P99.5,58,434,58.0
+parking_spaces,0.0,0.0,0.0,0.0,0.0,7290,8.41,0.0,8.0,kept (genuine values),,0,8.0
+special_requests,0.0,1.0,1.0,-1.5,2.5,2663,3.07,0.0,5.0,kept (genuine values),,0,5.0

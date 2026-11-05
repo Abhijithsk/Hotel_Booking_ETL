@@ -1,0 +1,9 @@
+market_segment,total_bookings,cancelled_bookings,avg_daily_rate,avg_lead_time,avg_nights,realized_revenue,cancellation_rate_pct
+online ta,51285,18230,118.87,80.23,3.62,12959573.83,35.55
+offline ta/to,13749,2056,82.19,106.58,4.73,4590428.18,14.95
+direct,11652,1733,117.95,49.15,3.25,3909526.85,14.87
+groups,4891,1331,75.61,146.97,3.47,922610.55,27.21
+corporate,4155,507,69.04,16.31,2.04,482795.88,12.2
+complementary,682,83,3.14,14.01,1.7,4804.53,12.17
+aviation,222,44,102.43,4.36,3.65,68968.36,19.82
+unknown,2,2,15.0,1.5,1.5,0.0,100.0

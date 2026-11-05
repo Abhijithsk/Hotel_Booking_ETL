@@ -56,20 +56,20 @@ DOI page before redistributing the data.
                   v
    +------------------------------+
    | TRANSFORM  transform()       |
-   |  Member 1  structural clean  |  rename, duplicates, text, dates, dtypes
-   |  Member 2  missing values    |  placeholders, drop / flag / impute
-   |  Member 3  invalid + outliers|  business rules, IQR detection, capping
-   |  Member 4  features + checks |  new columns, categories, sort, validation
+   |  Abhijith  structural clean  |  rename, duplicates, text, dates, dtypes
+   |  Farhan  missing values    |  placeholders, drop / flag / impute
+   |  Keerthi  invalid + outliers|  business rules, IQR detection, capping
+   |  Anaz  features + checks |  new columns, categories, sort, validation
    +------------------------------+
                   |
                   v
    +------------------------------+
-   | GENERATE REPORTS  (Member 4) |  14 report tables
+   | GENERATE REPORTS  (Anaz) |  14 report tables
    +------------------------------+
                   |
                   v
    +------------------------------+
-   | LOAD  load()      (Member 4) |  CSV files -> reports/ and output/, charts
+   | LOAD  load()      (Anaz) |  CSV files -> reports/ and output/, charts
    +------------------------------+
 ```
 More detail and the interface between the modules: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
@@ -129,7 +129,6 @@ If the download fails but `raw_data/hotel_bookings_raw.csv` exists, the pipeline
 | Member 3 | [@KeerthiM-LAL](https://github.com/KeerthiM-LAL) | `etl/member3_invalid_and_outliers.py` | [docs/tasks/member3.md](docs/tasks/member3.md) |
 | Member 4 | [@anazzmuhmad](https://github.com/anazzmuhmad) | `etl/member4_features.py`, `etl/member4_reports.py` | [docs/tasks/member4.md](docs/tasks/member4.md) |
 | Team lead | [@Abhijithsk](https://github.com/Abhijithsk) | `pipeline.py`, `etl/common.py`, docs, CI | - |
-
 Each member works on their own branch and in their own files, so merges do not conflict. See
 [CONTRIBUTING.md](CONTRIBUTING.md) and [docs/GIT_WORKFLOW.md](docs/GIT_WORKFLOW.md).
 

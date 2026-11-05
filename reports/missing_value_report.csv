@@ -1,0 +1,35 @@
+column,missing_before,missing_pct_before,treatment,missing_after
+hotel,0,0.0,No action needed,0
+is_cancelled,0,0.0,No action needed,0
+lead_time,0,0.0,No action needed,0
+arrival_year,0,0.0,No action needed,0
+arrival_month_name,0,0.0,No action needed,0
+arrival_week,0,0.0,No action needed,0
+arrival_day,0,0.0,No action needed,0
+weekend_nights,0,0.0,No action needed,0
+week_nights,0,0.0,No action needed,0
+adults,0,0.0,No action needed,0
+children,4,0.0,Filled with 0 (mode),0
+babies,0,0.0,No action needed,0
+meal,492,0.56,'undefined' replaced with 'sc',0
+country,452,0.52,Filled with 'UNK',0
+market_segment,2,0.0,'undefined' replaced with 'unknown',0
+distribution_channel,5,0.01,'undefined' replaced with 'unknown',0
+is_repeat_guest,0,0.0,No action needed,0
+previous_cancellations,0,0.0,No action needed,0
+previous_bookings_kept,0,0.0,No action needed,0
+reserved_room_type,0,0.0,No action needed,0
+assigned_room_type,0,0.0,No action needed,0
+booking_changes,0,0.0,No action needed,0
+deposit_type,0,0.0,No action needed,0
+agent,12193,13.95,Filled with 0 (no agent); has_agent flag created,0
+company,82137,93.98,Dropped (>90% missing); has_company flag created,column dropped
+waiting_days,0,0.0,No action needed,0
+customer_type,0,0.0,No action needed,0
+avg_daily_rate,0,0.0,No action needed,0
+parking_spaces,0,0.0,No action needed,0
+special_requests,0,0.0,No action needed,0
+reservation_status,0,0.0,No action needed,0
+reservation_status_date,0,0.0,No action needed,0
+arrival_month,0,0.0,No action needed,0
+arrival_date,0,0.0,No action needed,0

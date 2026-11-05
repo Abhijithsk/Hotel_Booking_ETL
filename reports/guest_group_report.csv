@@ -1,0 +1,5 @@
+guest_group,total_bookings,cancelled_bookings,avg_daily_rate,avg_lead_time,avg_nights,realized_revenue,cancellation_rate_pct
+couple,56225,15946,102.53,86.55,3.85,15121116.91,28.36
+family,9065,3118,155.22,88.24,3.96,3303173.59,34.4
+group,5464,1839,153.91,93.19,3.75,2040763.62,33.66
+solo,15884,3083,79.9,48.73,2.71,2473654.06,19.41
