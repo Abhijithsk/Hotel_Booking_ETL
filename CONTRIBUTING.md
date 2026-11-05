@@ -15,11 +15,11 @@ people can work at the same time without conflicts.
 ## 2. Who owns what
 | Area | Owner |
 |---|---|
-| `etl/member1_structural_cleaning.py`, `tests/test_member1_*` | Abhijith |
-| `etl/member2_missing_values.py`, `tests/test_member2_*` | Farhan |
-| `etl/member3_invalid_and_outliers.py`, `tests/test_member3_*` | Keerthi |
-| `etl/member4_features.py`, `etl/member4_reports.py`, `tests/test_member4_*` | Anaz |
-| `pipeline.py`, `etl/common.py`, `tests/conftest.py`, `tests/test_pipeline.py`, `docs/`, `.github/`, `README.md` | Abhijith |
+| `etl/member1_structural_cleaning.py`, `tests/test_member1_*` | **ABHIJITH** |
+| `etl/member2_missing_values.py`, `tests/test_member2_*` | **FARHAN** |
+| `etl/member3_invalid_and_outliers.py`, `tests/test_member3_*` | **KEERTHI** |
+| `etl/member4_features.py`, `etl/member4_reports.py`, `tests/test_member4_*` | **ANAZ** |
+| `pipeline.py`, `etl/common.py`, `tests/conftest.py`, `tests/test_pipeline.py`, `docs/`, `.github/`, `README.md` | Team lead |
 
 Need a change in a shared file (for example a new constant in `etl/common.py`)? Open an issue or ask
 the team lead; do not edit it inside your own pull request.
