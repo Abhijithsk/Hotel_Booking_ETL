@@ -1,0 +1,2 @@
+model,task,params,seconds,notes,accuracy,precision,recall,f1,roc_auc,baseline_accuracy
+svm,classification,"{'kernel': 'rbf', 'C': 1.0, 'gamma': 'scale', 'train_rows': 15000}",34.5,"trained on 15,000 sampled train rows (SVM is slow on big data)",0.8053,0.7342,0.4653,0.5696,0.8334,0.7232
