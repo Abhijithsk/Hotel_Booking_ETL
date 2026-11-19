@@ -1,0 +1,7 @@
+model,task,params,seconds,notes,mae,rmse,r2,baseline_rmse,accuracy,precision,recall,f1,roc_auc,baseline_accuracy
+linear_regression,regression,{'fit_intercept': True},2.0,"strongest inputs: cat__market_segment_complementary, cat__distribution_channel_infrequent_sklearn, cat__reserved_room_type_b",23.73,31.5,0.6204,51.13,,,,,,
+logistic_regression,classification,{'model__C': 10},9.9,"strongest inputs: cat__deposit_type_non refund, cat__country_AGO, cat__deposit_type_no deposit",,,,,0.7834,0.6709,0.4267,0.5217,0.8123,0.7232
+knn,classification,{'n_neighbors': 3},11.3,no feature importance - KNN has no coefficients,,,,,0.7666,0.5836,0.5481,0.5653,0.7637,0.7232
+svm,classification,"{'kernel': 'rbf', 'C': 1.0, 'gamma': 'scale', 'train_rows': 15000}",34.5,"trained on 15,000 sampled train rows (SVM is slow on big data)",,,,,0.8053,0.7342,0.4653,0.5696,0.8334,0.7232
+decision_tree,classification,"{'max_depth': 12, 'min_samples_leaf': 5}",10.7,"most important: num__lead_time, cat__market_segment_online ta, num__special_requests",,,,,0.8085,0.673,0.5993,0.634,0.8517,0.7232
+random_forest,classification,"{'n_estimators': 200, 'max_depth': 20, 'min_samples_leaf': 3, 'max_features': 'sqrt'}",6.6,"most important: num__lead_time, num__special_requests, cat__country_PRT",,,,,0.8219,0.7533,0.5303,0.6225,0.8798,0.7232

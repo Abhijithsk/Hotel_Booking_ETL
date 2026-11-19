@@ -1,0 +1,2 @@
+model,task,params,seconds,notes,accuracy,precision,recall,f1,roc_auc,baseline_accuracy
+logistic_regression,classification,{'model__C': 10},9.9,"strongest inputs: cat__deposit_type_non refund, cat__country_AGO, cat__deposit_type_no deposit",0.7834,0.6709,0.4267,0.5217,0.8123,0.7232

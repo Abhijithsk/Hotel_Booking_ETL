@@ -1,0 +1,2 @@
+model,task,params,seconds,notes,accuracy,precision,recall,f1,roc_auc,baseline_accuracy
+knn,classification,{'n_neighbors': 3},11.3,no feature importance - KNN has no coefficients,0.7666,0.5836,0.5481,0.5653,0.7637,0.7232

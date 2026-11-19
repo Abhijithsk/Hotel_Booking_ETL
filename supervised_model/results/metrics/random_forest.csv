@@ -1,0 +1,2 @@
+model,task,params,seconds,notes,accuracy,precision,recall,f1,roc_auc,baseline_accuracy
+random_forest,classification,"{'n_estimators': 200, 'max_depth': 20, 'min_samples_leaf': 3, 'max_features': 'sqrt'}",6.6,"most important: num__lead_time, num__special_requests, cat__country_PRT",0.8219,0.7533,0.5303,0.6225,0.8798,0.7232

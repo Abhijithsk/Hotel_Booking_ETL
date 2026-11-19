@@ -1,0 +1,2 @@
+model,task,params,seconds,notes,mae,rmse,r2,baseline_rmse
+linear_regression,regression,{'fit_intercept': True},2.0,"strongest inputs: cat__market_segment_complementary, cat__distribution_channel_infrequent_sklearn, cat__reserved_room_type_b",23.73,31.5,0.6204,51.13

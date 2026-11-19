@@ -1,0 +1,2 @@
+model,task,params,seconds,notes,accuracy,precision,recall,f1,roc_auc,baseline_accuracy
+decision_tree,classification,"{'max_depth': 12, 'min_samples_leaf': 5}",10.7,"most important: num__lead_time, cat__market_segment_online ta, num__special_requests",0.8085,0.673,0.5993,0.634,0.8517,0.7232
