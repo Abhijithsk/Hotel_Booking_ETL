@@ -1,0 +1,2 @@
+model,params,seconds,notes,n_clusters,noise_pct,smallest_cluster_pct,largest_cluster_pct,silhouette,davies_bouldin,calinski_harabasz,stability_ari
+kmeans,"{'k': 5, 'n_init': 10}",15.2,k=5 chosen from 3..8,5,0.0,0.93,75.0,0.3688,1.18,17015.0,1.0

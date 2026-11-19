@@ -1,0 +1,5 @@
+model,params,seconds,notes,n_clusters,noise_pct,smallest_cluster_pct,largest_cluster_pct,silhouette,davies_bouldin,calinski_harabasz,stability_ari,ari_vs_kmeans,avg_confidence
+kmeans,"{'k': 5, 'n_init': 10}",15.2,k=5 chosen from 3..8,5,0.0,0.93,75.0,0.3688,1.18,17015.0,1.0,,
+agglomerative,"{'linkage': 'ward', 'k': 6, 'fit_sample': 10000}",48.4,"fitted on 10,000 sampled bookings, others assigned to the nearest centre",6,0.0,0.63,74.9,0.373,1.139,15701.0,0.841,0.535,
+gmm,"{'components': 4, 'covariance': 'full'}",23.4,soft clustering; label = most probable component,4,0.0,0.99,83.2,0.3621,1.222,13971.0,0.637,,1.0
+hdbscan,"{'min_cluster_size': 300, 'sample': 15000}",7.2,"scored on a 15,000-booking sample; noise points are not clustered",4,11.7,3.3,72.7,0.3652,0.982,2927.0,,,

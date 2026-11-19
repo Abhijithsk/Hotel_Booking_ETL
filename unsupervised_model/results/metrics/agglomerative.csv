@@ -1,0 +1,2 @@
+model,params,seconds,notes,n_clusters,noise_pct,smallest_cluster_pct,largest_cluster_pct,silhouette,davies_bouldin,calinski_harabasz,stability_ari,ari_vs_kmeans
+agglomerative,"{'linkage': 'ward', 'k': 6, 'fit_sample': 10000}",48.4,"fitted on 10,000 sampled bookings, others assigned to the nearest centre",6,0.0,0.63,74.9,0.373,1.139,15701.0,0.841,0.535
