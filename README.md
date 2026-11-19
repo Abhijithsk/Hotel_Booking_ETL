@@ -20,6 +20,7 @@ forecasting.
 - [Transformations](#transformations)
 - [Reports generated](#reports-generated)
 - [Key findings](#key-findings)
+- [Supervised learning](#supervised-learning)
 - [Unsupervised learning](#unsupervised-learning)
 - [Challenges faced](#challenges-faced)
 - [Learning outcomes](#learning-outcomes)
@@ -191,6 +192,29 @@ All reports are saved in `reports/`; the full dataset, a data dictionary and 4 c
 - Online travel agents make 59% of bookings and cancel at **35.6%**; corporate bookings cancel at 12.2%.
 - Non-refundable deposits show a **94.7%** cancellation rate (1,038 bookings), a surprising pattern worth investigating.
 - Portugal (PRT) is the biggest source market (26,864 bookings) and also cancels the most (36.4%).
+
+## Supervised learning
+
+Six supervised models are trained and compared in the `supervised_model/` folder, one algorithm per
+member, on the same fixed 80/20 split. **Linear Regression** predicts the room price
+(`avg_daily_rate`); the five classifiers predict whether a booking is cancelled (`is_cancelled`).
+Leakage columns such as `reservation_status` are removed first. See
+[supervised_model/README.md](supervised_model/README.md) for the method and the full results.
+
+| Model | Task | Main scores |
+|---|---|---|
+| Linear Regression | price | R2 0.62, RMSE 31.5 (baseline 51.1) |
+| Logistic Regression | cancellation | accuracy 0.783, F1 0.522, ROC-AUC 0.812 |
+| KNN | cancellation | accuracy 0.767, F1 0.565, ROC-AUC 0.764 |
+| SVM (RBF, 15,000 training rows) | cancellation | accuracy 0.805, F1 0.570, ROC-AUC 0.833 |
+| Decision Tree | cancellation | accuracy 0.809, F1 **0.634**, ROC-AUC 0.852 |
+| **Random Forest** | cancellation | accuracy **0.822**, F1 0.623, ROC-AUC **0.880** |
+
+Only 28% of the bookings are cancelled, so always predicting "not cancelled" already gives 72%
+accuracy; the F1 score and ROC-AUC are therefore more informative than accuracy. Random Forest is
+the best overall model, and the Decision Tree finds the most cancellations (recall 0.60).
+
+Run: `python -m supervised_model.train_models`
 
 ## Unsupervised learning
 
