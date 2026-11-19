@@ -20,6 +20,7 @@ forecasting.
 - [Transformations](#transformations)
 - [Reports generated](#reports-generated)
 - [Key findings](#key-findings)
+- [Unsupervised learning](#unsupervised-learning)
 - [Challenges faced](#challenges-faced)
 - [Learning outcomes](#learning-outcomes)
 - [Future improvements](#future-improvements)
@@ -95,6 +96,8 @@ Hotel_Booking_ETL/
 │   ├── member4_features.py
 │   └── member4_reports.py           generate_reports() + load()
 ├── tests/                           automated tests, one file per member
+├── supervised_model/                regression and classification models, one file per member
+├── unsupervised_model/              clustering models (K-Means, Agglomerative, GMM, HDBSCAN)
 ├── raw_data/                        untouched copy of the source file
 ├── reports/                         generated report CSVs
 ├── output/                          analysis-ready dataset, data dictionary, charts, log
@@ -189,6 +192,25 @@ All reports are saved in `reports/`; the full dataset, a data dictionary and 4 c
 - Non-refundable deposits show a **94.7%** cancellation rate (1,038 bookings), a surprising pattern worth investigating.
 - Portugal (PRT) is the biggest source market (26,864 bookings) and also cancels the most (36.4%).
 
+## Unsupervised learning
+
+Four clustering models group the bookings into guest segments without using the cancellation
+label: **K-Means**, **Agglomerative (ward)**, **Gaussian Mixture** and **HDBSCAN**. The label
+columns are removed before clustering and are used only afterwards to describe each segment.
+Each member owns one algorithm in the `unsupervised_model/` folder; see
+[unsupervised_model/README.md](unsupervised_model/README.md) for the method and the full results.
+
+| Model | Clusters | Silhouette | Stability |
+|---|---|---|---|
+| **K-Means** (main model) | 5 | 0.369 | 1.00 |
+| Agglomerative (ward) | 6 | 0.373 | 0.84 |
+| Gaussian Mixture | 4 | 0.362 | 0.64 |
+| HDBSCAN | 4 | 0.365* | - |
+
+\*scored on a sample, without the 11.7% of bookings it labels as noise.
+
+Run: `python -m unsupervised_model.run_clustering`
+
 ## Challenges faced
 - **Hidden missing values:** `meal`, `market_segment` and `distribution_channel` use the text
   "Undefined" instead of blanks, so a plain null check misses them.
@@ -217,7 +239,7 @@ All reports are saved in `reports/`; the full dataset, a data dictionary and 4 c
 - Add schema validation (for example `pandera`) and command-line options for `pipeline.py`.
 - Schedule the pipeline (cron / Airflow) for datasets that update regularly.
 - Add a dashboard (Streamlit / Power BI) on top of the reports.
-- Extend the project with a cancellation-prediction model (drop the leakage columns first).
+- Add a cancellation-prediction deployment (an API or dashboard) on top of the trained models.
 
 ## Contributing
 Read [CONTRIBUTING.md](CONTRIBUTING.md) first. In short: one branch per member, small commits with
