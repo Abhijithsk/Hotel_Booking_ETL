@@ -1,0 +1,2 @@
+model,params,seconds,notes,n_clusters,noise_pct,smallest_cluster_pct,largest_cluster_pct,silhouette,davies_bouldin,calinski_harabasz
+hdbscan,"{'min_cluster_size': 300, 'sample': 15000}",7.2,"scored on a 15,000-booking sample; noise points are not clustered",4,11.7,3.3,72.7,0.3652,0.982,2927.0

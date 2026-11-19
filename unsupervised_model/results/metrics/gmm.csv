@@ -1,0 +1,2 @@
+model,params,seconds,notes,n_clusters,noise_pct,smallest_cluster_pct,largest_cluster_pct,silhouette,davies_bouldin,calinski_harabasz,stability_ari,avg_confidence
+gmm,"{'components': 4, 'covariance': 'full'}",23.4,soft clustering; label = most probable component,4,0.0,0.99,83.2,0.3621,1.222,13971.0,0.637,1.0

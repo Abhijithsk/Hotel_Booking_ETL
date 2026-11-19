@@ -1,0 +1,5 @@
+cluster,bookings,share_of_bookings,lead_time,total_nights,avg_daily_rate,total_guests,share_with_children,special_requests,booking_changes,share_repeat_guest,share_with_agent,share_with_company,avg_waiting_days,share_resort_hotel,cancel_rate
+0,8816,0.102,88.72,3.969,156.493,3.386,0.92,0.925,0.39,0.0,0.927,0.0,0.0,0.42,0.346
+1,72120,0.832,80.272,3.691,103.582,1.896,0.0,0.68,0.245,0.0,0.884,0.043,0.0,0.378,0.27
+2,854,0.01,176.241,3.201,85.52,1.73,0.011,0.16,0.527,0.012,0.879,0.036,44.354,0.164,0.344
+3,4848,0.056,46.985,2.5,74.078,1.513,0.043,0.693,0.287,0.646,0.414,0.417,0.0,0.519,0.248
