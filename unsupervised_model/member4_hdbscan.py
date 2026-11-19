@@ -10,14 +10,46 @@ cloud rather than separate islands. That makes it a poor choice for splitting AL
 segments and a good illustration of when density-based clustering does not fit. It runs on a
 random sample of 15,000 bookings (the full data takes about 2.5 minutes) and is scored on that
 sample.
-
-STUB - Member 4 (Anaz) replaces this file with the real implementation
-(see unsupervised_model/tasks/member4.md).
 """
 
+import time
+import warnings
+
+import numpy as np
+from sklearn.cluster import HDBSCAN
+
+from unsupervised_model import common
+
 NAME = "hdbscan"
+SAMPLE = 15000
 
 
 def run(df=None, fast=False):
-    """Cluster, score, draw and save; return the dictionary made by common.make_result()."""
-    raise NotImplementedError("Member 4: implement run() - see unsupervised_model/tasks/member4.md")
+    """Cluster a sample with HDBSCAN, score the non-noise points, draw and save."""
+    started = time.time()
+    df = common.load_data() if df is None else df
+    prep = common.prepare(df, fast)
+
+    idx = np.random.RandomState(common.SEED).choice(len(prep.X), min(SAMPLE, len(prep.X)),
+                                                    replace=False)
+    Xs = prep.X[idx]
+    data = prep.data.iloc[idx].reset_index(drop=True)
+    min_cluster_size = max(20, int(0.02 * len(Xs)))      # a cluster needs >= 2% of the sample
+
+    with warnings.catch_warnings():          # newer scikit-learn versions warn about `copy`
+        warnings.simplefilter("ignore", FutureWarning)
+        labels = HDBSCAN(min_cluster_size=min_cluster_size, n_jobs=-1).fit_predict(Xs)
+    metrics = common.evaluate(Xs, labels)
+
+    prof = common.profile(data, labels)
+    common.plot_clusters(NAME, f"HDBSCAN found {metrics['n_clusters']} dense clusters",
+                         Xs, labels)
+    if metrics["n_clusters"] >= 1:
+        common.plot_profile(NAME, "HDBSCAN: what makes each dense cluster different",
+                            Xs, prep.names, labels)
+
+    result = common.make_result(
+        NAME, {"min_cluster_size": min_cluster_size, "sample": len(Xs)}, metrics, started,
+        notes=f"scored on a {len(Xs):,}-booking sample; noise points are not clustered")
+    common.save_result(result, prof)
+    return result
